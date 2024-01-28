@@ -1,0 +1,8 @@
+mixin sub-menu(mods)
+  .sub-menu 
+    .sub-menu__inner 
+      h1.sub-menu__title Настройки профиля
+      ul.sub-menu__list 
+        each text in ['Первичная настройка','Профиль пользователя','Изменение общих настроек','Дополнительные возможности','Отправка запросов','Работа со стастистикой']
+          li.sub-menu__item 
+            a.sub-menu__link=text

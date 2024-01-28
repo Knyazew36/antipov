@@ -1,0 +1,69 @@
+extends ../../layout/layout
+
+block variables
+  -
+    const pageTitle = 'Index'
+
+block content
+  .container
+    .breadcrumbs 
+      .breadcrumb 
+        p Назад
+    .content 
+      +sub-menu 
+      .content__base
+        .search 
+          .search__inner 
+            +search-svg
+            input(type="text")
+        .block
+          section.setting 
+            .setting__inner 
+              h2.title-secondary.setting__title Первичная настройка
+              p.setting__text.text Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio facilis minima necessitatibus ducimus illo sed quo deserunt excepturi sunt non enim inventore aliquam esse asperiores ea dolorem quibusdam labore quos facere iusto, obcaecati doloremque aliquid est.
+              .recommendation 
+                p.recommendation__text Рекомендации:
+                p.recommendation__text Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Fugiat.
+          section.start 
+            .start__inner 
+              h2.title-secondary Начало работы
+              p.start__text.text Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam sunt, iste animi, quia numquam, rerum veritatis itaque tempore facilis repellendus harum reiciendis.
+
+              ul.start__list 
+                each text, index in['Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, doloribus, nulla. Soluta error repudiandae cumque veniam fugiat, voluptatem repellat provident, pariatur.','Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, doloribus, nulla. Soluta error repudiandae cumque veniam fugiat, voluptatem repellat provident, pariatur.','Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, doloribus, nulla. Soluta error repudiandae cumque veniam fugiat, voluptatem repellat provident, pariatur.',]
+                  li.start__item 
+                    span
+                      p=index + 1
+                    p.text=text
+          section.info 
+            .info__inner 
+              h2.title-secondary Дополнительная информация
+              p.text.info__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam sunt, iste animi, quia numquam, rerum veritatis itaque tempore facilis repellendus harum reiciendis.
+              .tab
+                .tab__buttons 
+                  button.tab__button Пункт 11
+                  button.tab__button Пункт 11
+                  button.tab__button Пункт 11
+                .tab__container 
+                  .tab__section 
+                    p.text Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio facilis minima necessitatibus ducimus illo sed quo deserunt excepturi sunt non enim inventore aliquam esse asperiores ea dolorem quibusdam est.
+                    p.text Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, doloribus, nulla. Soluta error repudiandae cumque veniam fugiat.
+          section.feedback 
+            .feedback__inner 
+              h2.title-secondary Вам помогла эта статья?
+              .feedback__row
+                button.button Да
+                button.button Нет
+              p.feedback__subtext 50 людям помогла эта статья
+        section.helper 
+          .helper__inner
+            .helper__item 
+              h3.title-secondary Сообщество GB
+              p.helper__text Обращайтесь за помощью к членам сообщества, задавайте любые вопросы и получайте ответы.
+              a.helper__link Присоединиться к сообществу
+
+            .helper__item 
+              h3.title-secondary Сообщество GB
+              p.helper__text Обращайтесь за помощью к членам сообщества, задавайте любые вопросы и получайте ответы.
+              a.helper__link Присоединиться к сообществу
+

@@ -1,0 +1,21 @@
+
+header.header
+  .header__inner 
+    a.header__logo
+      +logo
+      span GB Adviser
+  .header__search 
+    +search-svg 
+    input(type="text")
+  .header__right
+    .header__controls 
+      button.header__dialog
+        +dialog-svg
+      button.header__notifications 
+        +notifications-svg
+        span 5
+    .header__user 
+      a.header__avatar(href="#") 
+      p.header__name Саша Смелая
+    .header__menu
+      +arrow-bottom

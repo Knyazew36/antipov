@@ -1,0 +1,78 @@
+mixin picture(fileName, mobileFileName)
+  -
+    var file = {
+      getTitle(filename) {
+        var segments = filename.split('.');
+        segments.pop();
+        var title = segments.join('.');
+        return title;
+      },
+      getExtension(filename) {
+        var segments = filename.split('.');
+        var extension = segments.pop();
+        return extension;
+      },
+      getPath(title, extension) {
+        var path = '../../images/' + title + "." + extension;
+        return path;
+      },
+    };
+    var fileTitle = file.getTitle(fileName);
+    var fileExtension = file.getExtension(fileName);
+
+
+  if mobileFileName
+    picture.picture&attributes(attributes)
+      source(
+        type="image/webp"
+        srcset=(file.getPath(fileTitle, "webp") + " 1x")
+        alt=fileName
+        class="lazyload" 
+        media="(min-width: 769px)" 
+      )
+      source(
+        type="image/jpeg"
+        srcset=(file.getPath(fileTitle, "jpg") + " 1x")
+        alt=fileName
+        class="lazyload" 
+        media="(min-width: 769px)"  
+      )
+      source(
+        type="image/webp"
+        srcset=(file.getPath(fileTitle + '-mob', "webp") + " 1x")
+        alt=fileName
+        class="lazyload" 
+        media="(max-width: 768px)"  
+      )
+      source(
+        type="image/jpeg"
+        srcset=(file.getPath(fileTitle + '-mob', "jpg") + " 1x")
+        alt=fileName
+        class="lazyload" 
+        media="(max-width: 768px)" 
+      )
+      img.picture__img(
+        class="lazyload" 
+        data-src=(file.getPath(fileTitle, fileExtension))
+        alt=fileName
+      )
+      
+  else
+    picture.picture&attributes(attributes)
+      source(
+        type="image/webp"
+        srcset=(file.getPath(fileTitle, "webp") + " 1x")
+        alt=fileName
+        class="lazyload" 
+      )
+      source(
+        type="image/jpeg"
+        srcset=(file.getPath(fileTitle, "jpg") + " 1x")
+        alt=fileName
+        class="lazyload" 
+      )
+      img.picture__img(
+        class="lazyload" 
+        data-src=(file.getPath(fileTitle, fileExtension))
+        alt=fileName
+      )

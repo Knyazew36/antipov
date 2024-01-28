@@ -1,0 +1,46 @@
+.sub-menu {
+  position: relative;
+  width: rem(360px);
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: rem(30px);
+  }
+
+  &__title {
+    color: #131523;
+    font-size: rem(24px);
+    font-weight: 700;
+    line-height: rem(36px);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    padding: rem(12px) rem(20px);
+    transition: $transition;
+    border-radius: rem(4px);
+    cursor: pointer;
+
+    a {
+      font-size: rem(14px);
+      font-weight: 500;
+      transition: $transition;
+      color: #131523;
+    }
+
+    @media #{media('>',d)} {
+      &:hover {
+        background-color: #1e5eff;
+
+        a {
+          color: #fff;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}

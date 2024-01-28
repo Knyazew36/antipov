@@ -1,0 +1,133 @@
+.setting {
+  padding-bottom: rem(28px);
+
+  border-bottom: 1px solid #e6e9f4;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__text {
+    margin-top: rem(24px);
+  }
+
+  .recommendation {
+    margin-top: rem(24px);
+    border-radius: rem(4px);
+    background: #f5f6fa;
+    padding: rem(20px);
+    display: flex;
+    flex-direction: column;
+    gap: rem(4px);
+
+    &__text {
+      color: #5a607f;
+      font-size: rem(16px);
+      font-weight: 500;
+      line-height: rem(24px); /* 150% */
+    }
+  }
+}
+.start {
+  margin-top: rem(40px);
+
+  &__text {
+    margin-top: rem(24px);
+  }
+
+  &__list {
+    margin-top: rem(20px);
+    display: flex;
+    flex-direction: column;
+    gap: rem(20px);
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    gap: rem(24px);
+
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: rem(36px);
+      height: rem(36px);
+      background-color: #f5f6fa;
+      border-radius: 50%;
+
+      p {
+        color: #5a607f;
+        font-size: rem(16px);
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.feedback {
+  margin-top: rem(40px);
+  &__row {
+    margin-top: rem(20px);
+    display: flex;
+    gap: rem(12px);
+
+    .button {
+      padding: rem(8px) rem(23px);
+      border-radius: rem(4px);
+      border: 1px solid #d7dbec;
+      background: #fff;
+      color: #1e5eff;
+      font-size: rem(14px);
+      font-weight: 500;
+      cursor: pointer;
+      transition: $transition;
+
+      @media #{media('>',d)} {
+        &:hover {
+          background-color: #1e5eff;
+
+          color: #fff;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  &__subtext {
+    margin-top: rem(12px);
+    color: #5a607f;
+    font-size: rem(12px);
+  }
+}
+
+.helper {
+  margin-top: rem(30px);
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(29px);
+  }
+
+  &__item {
+    padding: rem(28px);
+    background-color: white;
+    border-radius: rem(6px);
+    box-shadow: 0px 1px 4px 0px rgba(21, 34, 50, 0.08);
+  }
+  &__text {
+    margin-top: rem(12px);
+    color: #131523;
+    font-size: rem(14px);
+    font-weight: 400;
+    line-height: rem(20px); /* 142.857% */
+  }
+
+  &__link {
+    margin-top: rem(20px);
+    cursor: pointer;
+    color: #1e5eff;
+    font-size: rem(14px);
+    font-weight: 500;
+  }
+}

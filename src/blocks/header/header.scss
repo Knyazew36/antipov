@@ -1,0 +1,90 @@
+.header {
+  padding: rem(14px) rem(22px) rem(16px) rem(22px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  box-shadow: 0px 1px 4px 0px rgba(21, 34, 50, 0.08);
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(12px);
+
+    color: #000;
+    font-size: rem(22px);
+    font-style: normal;
+    font-weight: 700;
+
+    svg {
+      width: rem(41px);
+      height: rem(38px);
+      flex-shrink: 0;
+    }
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+    gap: rem(8px);
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    gap: rem(20px);
+  }
+
+  &__notifications {
+    position: relative;
+    width: rem(24px);
+    height: rem(24px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    span {
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: rem(16px);
+      height: rem(16px);
+      color: #fff;
+      text-align: center;
+      font-size: rem(12px);
+      font-style: normal;
+      font-weight: 700;
+      border-radius: rem(12px);
+      background: #1e5eff;
+      flex-shrink: 0;
+    }
+  }
+
+  &__user {
+    margin-left: rem(38px);
+    display: flex;
+    align-items: center;
+    gap: rem(11px);
+  }
+
+  &__avatar {
+    width: rem(39px);
+    height: rem(39px);
+  }
+
+  &__name {
+    color: #5a607f;
+    font-size: rem(14px);
+    font-weight: 500;
+  }
+}
