@@ -8,14 +8,14 @@ block content
   .container
     .breadcrumbs 
       .breadcrumb 
+        +arrow-left
         p Назад
     .content 
       +sub-menu 
       .content__base
         .search 
           .search__inner 
-            +search-svg
-            input(type="text")
+            +input(placeholder='Поиск...')
         .block
           section.setting 
             .setting__inner 
@@ -38,16 +38,8 @@ block content
           section.info 
             .info__inner 
               h2.title-secondary Дополнительная информация
-              p.text.info__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam sunt, iste animi, quia numquam, rerum veritatis itaque tempore facilis repellendus harum reiciendis.
-              .tab
-                .tab__buttons 
-                  button.tab__button Пункт 11
-                  button.tab__button Пункт 11
-                  button.tab__button Пункт 11
-                .tab__container 
-                  .tab__section 
-                    p.text Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio facilis minima necessitatibus ducimus illo sed quo deserunt excepturi sunt non enim inventore aliquam esse asperiores ea dolorem quibusdam est.
-                    p.text Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, doloribus, nulla. Soluta error repudiandae cumque veniam fugiat.
+              +tab
+              
           section.feedback 
             .feedback__inner 
               h2.title-secondary Вам помогла эта статья?

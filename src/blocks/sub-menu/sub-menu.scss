@@ -1,6 +1,7 @@
 .sub-menu {
   position: relative;
-  width: rem(360px);
+  width: rem(245px);
+  flex-shrink: 0;
   &__inner {
     display: flex;
     flex-direction: column;
@@ -30,16 +31,15 @@
       font-weight: 500;
       transition: $transition;
       color: #131523;
+      white-space: nowrap;
     }
 
-    @media #{media('>',d)} {
-      &:hover {
-        background-color: #1e5eff;
+    &:hover {
+      background-color: #1e5eff;
 
-        a {
-          color: #fff;
-          font-weight: 700;
-        }
+      a {
+        color: #fff;
+        font-weight: 700;
       }
     }
   }

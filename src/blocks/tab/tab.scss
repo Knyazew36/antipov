@@ -1,0 +1,62 @@
+.tab {
+  position: relative;
+
+  &__content {
+    display: none;
+    flex-direction: column;
+    gap: rem(20px);
+    &.--active {
+      display: flex;
+    }
+  }
+  &__button {
+    cursor: pointer;
+    transition: $transition;
+    &:hover {
+      color: #1e5eff;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    padding: rem(16px) 0;
+    gap: rem(32px);
+    border-bottom: 1px solid #e6e9f4;
+
+    button {
+      color: #5a607f;
+      font-size: rem(16px);
+      font-weight: 500;
+      line-height: rem(24px);
+      position: relative;
+      width: rem(68px);
+      padding: 0;
+      transition: $transition;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: rem(-16px);
+        width: 100%;
+        height: rem(2px);
+        background: #1e5eff;
+        left: 0;
+        opacity: 0;
+        transition: $transition;
+      }
+
+      &.--active {
+        color: #1e5eff;
+
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__box {
+    padding-top: rem(20px);
+  }
+}

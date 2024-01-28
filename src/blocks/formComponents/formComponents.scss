@@ -1,0 +1,237 @@
+.input-wrapper {
+  $comp: &;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+
+  &.textarea-wrapper {
+    .input-wrapper-svg {
+      top: 4px;
+      right: 10px;
+    }
+  }
+  &-svg {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: rem(16px);
+    cursor: pointer;
+    width: rem(34px);
+    height: rem(34px);
+    svg {
+      width: rem(24px);
+      height: rem(24px);
+    }
+
+    path {
+      transition: $transition;
+      stroke: #a1a7c4;
+      opacity: 0.6;
+    }
+
+    &:hover {
+      path {
+        opacity: 1;
+      }
+    }
+  }
+
+  &-search {
+    position: absolute;
+    left: rem(16px);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__placeholder {
+    position: absolute;
+    left: rem(48px);
+    top: rem(11px);
+    transform-origin: left top;
+    transition: $transition;
+    pointer-events: none;
+    color: #a1a7c4;
+    font-size: rem(16px);
+    font-weight: 500;
+    line-height: 110%; /* 17.6px */
+    // text-transform: uppercase;
+    opacity: 0.6;
+  }
+
+  &:focus-within,
+  &.filled {
+    #{$comp}__placeholder {
+      top: 1px;
+      transform: scale(0.6);
+    }
+
+    .input-wrapper-svg {
+      display: block;
+    }
+  }
+
+  &.custom-map {
+    &:focus-within,
+    &.filled {
+      #{$comp}__placeholder {
+        top: 6px;
+        transform: scale(0.6);
+      }
+    }
+  }
+}
+
+.input {
+  width: 100%;
+  height: rem(40px);
+  caret-color: #a1a7c4;
+  border-radius: rem(4px);
+  border: 1px solid #d9e1ec;
+  background: white;
+  transition: $transition;
+  color: #131523;
+  font-size: rem(16px);
+  font-weight: 400;
+  line-height: 110%;
+  padding: rem(8px) rem(36px) rem(8px) rem(48px);
+  caret-width: rem(1px);
+
+  &::placeholder {
+    opacity: 0;
+  }
+
+  &:focus {
+    border: 1px solid var(--1, #1e5eff);
+    box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.05);
+  }
+
+  &_placeholder {
+    &::placeholder {
+      opacity: 1;
+    }
+  }
+}
+
+// @media #{media('<',d)} {
+//   .input-wrapper {
+//     $comp: &;
+//     &__placeholder {
+//       left: 12px;
+//       top: 15px;
+//       font-size: 13px;
+//     }
+
+//     &:focus-within,
+//     &.filled {
+//       #{$comp}__placeholder {
+//         top: 6px;
+//         transform: scale(0.6);
+//       }
+//     }
+
+//     &-svg {
+//       top: -2px;
+//       right: 10px;
+//       cursor: pointer;
+//       width: 30px;
+
+//       svg {
+//         width: 18px;
+//         height: 18px;
+//       }
+
+//       path {
+//         transition: $transition;
+//         stroke: #62215b;
+//         opacity: 0.6;
+//       }
+
+//       &:hover {
+//         path {
+//           opacity: 1;
+//         }
+//       }
+//     }
+//   }
+
+//   .textarea {
+//     // padding: 16px;
+//     // height: 161px;
+//     border-radius: 4px;
+//   }
+
+//   .parsley-errors-list {
+//     margin-top: 8px;
+//     font-size: 12px;
+//     color: #eb6e4b;
+//     font-weight: 500;
+//     color: color(error);
+//   }
+
+//   .input {
+//     // &-city {
+//     //   transition: $transition;
+//     //   pointer-events: none;
+//     //   transform: translateY(30px);
+//     //   opacity: 0;
+
+//     //   width: 100%;
+//     //   height: 220px;
+//     //   padding: 20px;
+//     //   @include styled-scrollbar();
+//     //   border-radius: 8px;
+//     //   border: 1px solid var(--unnamed, #f0e7ef);
+//     //   background: #fff;
+//     //   box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.08);
+//     //   position: absolute;
+//     //   top: 64px;
+
+//     //   &.active {
+//     //     pointer-events: all;
+//     //     transform: translateY(0);
+//     //     opacity: 1;
+//     //   }
+
+//     //   left: 0;
+//     //   &__inner {
+//     //     ul {
+//     //       display: flex;
+//     //       flex-direction: column;
+//     //       gap: 12px;
+//     //     }
+//     //     p {
+//     //       color: var(--1, #62215b);
+//     //       font-size: 18px;
+//     //       font-weight: 420;
+//     //       letter-spacing: -0.18px;
+//     //       transition: $transition;
+//     //       cursor: pointer;
+//     //       &:hover {
+//     //         color: #c19f86;
+//     //       }
+//     //     }
+//     //   }
+//     // }
+//     height: 43px;
+//     border-radius: 4px;
+//     font-size: 13px;
+//     padding: 15px 30px 14px 12px;
+//   }
+
+//   .checkbox {
+//     .container {
+//       font-size: 14px;
+//     }
+//   }
+
+//   .textarea {
+//     padding: 15px 30px 14px 12px;
+//     height: 120px;
+//     font-size: 13px;
+
+//     &__svg {
+//       top: 0 !important;
+//     }
+//   }
+// }

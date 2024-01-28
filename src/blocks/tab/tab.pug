@@ -1,0 +1,18 @@
+mixin tab(mods)
+  .tab
+    .tab__buttons
+      button.tab__button.--active(data-tab='tab1') Пункт 11
+      button.tab__button(data-tab='tab2') Пункт 10
+      button.tab__button(data-tab='tab3') Пункт 9
+    .tab__box
+      #tab1.tab__content.--active
+        p.text Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio facilis minima necessitatibus ducimus illo sed quo deserunt excepturi sunt non enim inventore aliquam esse asperiores ea dolorem quibusdam est.
+        p.text Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, doloribus, nulla. Soluta error repudiandae cumque veniam fugiat.
+
+      #tab2.tab__content
+        p.text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, corporis?
+        p.text Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, doloribus, nulla. Soluta error repudiandae cumque veniam fugiat.
+
+      #tab3.tab__content
+        p.text Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, architecto minus rem exercitationem quidem animi quis cumque? Earum nobis unde, dolorem dignissimos at dolores corporis incidunt veritatis maiores nam magnam provident, molestias tempora similique totam numquam quidem velit architecto rem.
+        p.text Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, doloribus, nulla. Soluta error repudiandae cumque veniam fugiat.

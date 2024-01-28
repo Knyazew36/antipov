@@ -1,14 +1,108 @@
 mixin sidebar(mods)
-  -
-    const baseName = 'sidebar'
-    let allMods = ''
-    if (typeof mods !== 'undefined' && mods) {
-      const modsList = mods.split(',')
-      for (const element of modsList) {
-        allMods += element.trim()[0] === '_' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
-      }
-      allMods = allMods.trim()
-    }
 
   .sidebar(class=allMods)&attributes(attributes)
-    block
+    .sidebar__inner 
+      
+      navigation.sidebar-navigation
+        ul.sidebar-list
+          li.sidebar-list__item
+            a(href="#").sidebar-list__link
+              .col
+                +home-svg
+                p Главная
+              .col
+                span.sidebar-list__item-count 16
+
+          li.sidebar-list__item
+            a(href="#").sidebar-list__link
+              .col
+                +requests-svg 
+                p Запросы
+              .col
+                span.sidebar-list__item-count
+
+          li.sidebar-list__item
+            a(href="#").sidebar-list__link
+              .col
+                +notes
+                p Заметки
+              .col
+                span.sidebar-list__item-count
+
+          li.sidebar-list__item
+            a(href="#").sidebar-list__link
+              .col
+                +pages
+                p Категории
+              .col
+                span.sidebar-list__item-count
+
+
+          li.sidebar-list__item
+            a(href="#").sidebar-list__link
+              .col
+                +users
+                p Пользователи
+              .col
+                span.sidebar-list__item-count
+
+
+          li.sidebar-list__item
+            a(href="#").sidebar-list__link
+              .col
+                +statistic
+                p Статистика
+              .col
+                span.sidebar-list__item-count
+
+          li.sidebar-list__item
+            a(href="#").sidebar-list__link
+              .col
+                +favourites
+                p Избранное
+              .col
+                span.sidebar-list__item-count
+
+          li.sidebar-list__item
+            a(href="#").sidebar-list__link
+              .col
+                +support
+                p Поддержка
+              .col
+                span.sidebar-list__item-count
+        .sidebar__block
+          p.sidebar__title Информация
+
+          ul.sidebar-list
+            li.sidebar-list__item
+              a(href="#").sidebar-list__link
+                .col
+                  +base
+                  p База знаний
+                .col
+                  span.sidebar-list__item-count 
+            li.sidebar-list__item
+              a(href="#").sidebar-list__link
+                .col
+                  +update
+                  p Обновления
+                .col
+                  span.sidebar-list__item-count 
+
+        .sidebar__block
+          p.sidebar__title Настройки
+          ul.sidebar-list
+            li.sidebar-list__item
+              a(href="#").sidebar-list__link
+                .col
+                  +user
+                  p Профиль
+                .col
+                  span.sidebar-list__item-count 
+            li.sidebar-list__item
+              a(href="#").sidebar-list__link
+                .col
+                  +setting
+                  p Общие настройки
+                .col
+                  span.sidebar-list__item-count 

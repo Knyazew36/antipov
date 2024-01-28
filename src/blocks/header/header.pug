@@ -5,8 +5,7 @@ header.header
       +logo
       span GB Adviser
   .header__search 
-    +search-svg 
-    input(type="text")
+    +input(placeholder='Поиск...').header__input
   .header__right
     .header__controls 
       button.header__dialog
@@ -16,6 +15,7 @@ header.header
         span 5
     .header__user 
       a.header__avatar(href="#") 
+        img(src="/public/images/user.png", alt="user")
       p.header__name Саша Смелая
     .header__menu
-      +arrow-bottom
+      +arrow-bottom-svg 
