@@ -155,6 +155,10 @@
     font-weight: 500;
     cursor: pointer;
   }
+
+  &__dialog {
+    cursor: pointer;
+  }
 }
 
 @media #{media('<',t)} {

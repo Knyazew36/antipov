@@ -75,7 +75,7 @@
 
   &__item {
     display: flex;
-    align-items: flex-start;
+    align-self: start;
     gap: rem(24px);
     flex-shrink: 0;
     span {
@@ -262,7 +262,6 @@
 
     &__item {
       display: flex;
-      align-items: flex-start;
       gap: rem(24px);
 
       span {
