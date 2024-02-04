@@ -3,6 +3,10 @@ body {
   font-family: Inter;
   background-color: #f5f6fa;
   font-style: normal;
+
+  &.--scroll-lock {
+    overflow-y: hidden;
+  }
 }
 
 picture {

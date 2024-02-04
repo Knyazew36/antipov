@@ -3,4 +3,8 @@
   font-size: rem(16px);
   font-weight: 400;
   line-height: rem(24px); /* 150% */
+
+  @media #{media('<',t)} {
+    font-size: rem(14px);
+  }
 }

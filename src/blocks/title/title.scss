@@ -3,4 +3,7 @@
   font-size: rem(20px);
   font-style: normal;
   font-weight: 700;
+  @media #{media('<',t)} {
+    font-size: rem(16px);
+  }
 }

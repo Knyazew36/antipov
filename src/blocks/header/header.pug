@@ -1,23 +1,24 @@
 
 header.header
   .header__inner 
+    +burger
     a.header__logo
       +logo
       span GB Adviser
-  .header__search 
-    +input(placeholder='Поиск...').header__input
-  .header__right
-    .header__controls 
-      button.header__dialog
-        +dialog-svg
-      button.header__notifications 
-        +notifications-svg
-        span 5
-    .header__user 
-      a.header__avatar(href="#") 
-        img(src="/public/images/user.png", alt="user")
-      p.header__name Саша Смелая
-    .header-menu
-      .header-menu__button
-        +arrow-bottom-svg 
-      .header-menu__links
+    .header__search 
+      +input(placeholder='Поиск...').header__input
+    .header__right
+      .header__controls 
+        button.header__dialog
+          +dialog-svg
+        button.header__notifications 
+          +notifications-svg
+          span 5
+      .header__user 
+        a.header__avatar(href="#") 
+          img(src="/public/images/user.png", alt="user")
+        p.header__name Саша Смелая
+      .header-menu
+        .header-menu__button
+          +arrow-bottom-svg 
+        .header-menu__links

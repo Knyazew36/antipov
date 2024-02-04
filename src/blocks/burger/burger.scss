@@ -1,0 +1,17 @@
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: rem(4px);
+  span {
+    display: block;
+    height: rem(2px);
+    width: rem(24px);
+    background-color: #5a607f;
+  }
+}
+
+@media #{media('<',t)} {
+  .burger {
+    display: flex;
+  }
+}

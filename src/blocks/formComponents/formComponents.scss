@@ -15,7 +15,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: rem(16px);
+    right: rem(10px);
     cursor: pointer;
     width: rem(34px);
     height: rem(34px);
@@ -55,7 +55,6 @@
     font-size: rem(16px);
     font-weight: 500;
     line-height: 110%; /* 17.6px */
-    // text-transform: uppercase;
     opacity: 0.6;
   }
 

@@ -77,7 +77,7 @@
     display: flex;
     align-items: flex-start;
     gap: rem(24px);
-
+    flex-shrink: 0;
     span {
       display: flex;
       align-items: center;
@@ -86,6 +86,7 @@
       height: rem(36px);
       background-color: #f5f6fa;
       border-radius: 50%;
+      flex-shrink: 0;
 
       p {
         color: #5a607f;
@@ -126,11 +127,16 @@
       cursor: pointer;
       transition: $transition;
 
-      &:hover {
-        background-color: #1e5eff;
+      @media #{media('>',t)} {
+        &:hover {
+          background-color: #1e5eff;
 
+          color: #fff;
+        }
+      }
+      &:active {
+        background-color: #1e5eff;
         color: #fff;
-        font-weight: 700;
       }
     }
   }
@@ -172,8 +178,197 @@
     font-weight: 500;
     transition: $transition;
 
-    &:hover {
-      text-decoration: underline;
+    @media #{media('>',t)} {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media #{media('<',t)} {
+  .breadcrumbs {
+    margin-top: 0;
+  }
+
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: rem(4px);
+    cursor: pointer;
+
+    $breadcrumb: &;
+
+    svg {
+      width: rem(13px);
+      height: rem(10px);
+      flex-shrink: 0;
+    }
+
+    p {
+      flex-shrink: 0;
+      color: #5a607f;
+      font-size: rem(13px);
+      font-weight: 500;
+      transition: $transition;
+    }
+  }
+
+  .setting {
+    padding-bottom: rem(28px);
+
+    border-bottom: 1px solid #e6e9f4;
+    &__inner {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__text {
+      margin-top: rem(24px);
+    }
+
+    .recommendation {
+      margin-top: rem(24px);
+      border-radius: rem(4px);
+      background: #f5f6fa;
+      padding: rem(20px);
+      display: flex;
+      flex-direction: column;
+      gap: rem(4px);
+
+      &__text {
+        color: #5a607f;
+        font-size: rem(16px);
+        font-weight: 500;
+        line-height: rem(24px); /* 150% */
+      }
+    }
+  }
+  .start {
+    margin-top: rem(40px);
+    border-bottom: 1px solid #e6e9f4;
+    padding-bottom: rem(28px);
+
+    &__text {
+      margin-top: rem(24px);
+    }
+
+    &__list {
+      margin-top: rem(20px);
+      display: flex;
+      flex-direction: column;
+      gap: rem(20px);
+    }
+
+    &__item {
+      display: flex;
+      align-items: flex-start;
+      gap: rem(24px);
+
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: rem(36px);
+        height: rem(36px);
+        background-color: #f5f6fa;
+        border-radius: 50%;
+
+        p {
+          color: #5a607f;
+          font-size: rem(16px);
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  .info {
+    margin-top: rem(40px);
+    padding-bottom: rem(28px);
+    border-bottom: 1px solid #e6e9f4;
+
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      gap: rem(28px);
+    }
+  }
+
+  .feedback {
+    margin-top: rem(40px);
+    &__row {
+      margin-top: rem(20px);
+      display: flex;
+      gap: rem(12px);
+
+      .button {
+        padding: rem(8px) rem(23px);
+        border-radius: rem(4px);
+        border: 1px solid #d7dbec;
+        background: #fff;
+        color: #1e5eff;
+        font-size: rem(14px);
+        font-weight: 500;
+        cursor: pointer;
+        transition: $transition;
+
+        @media #{media('>',t)} {
+          &:hover {
+            background-color: #1e5eff;
+
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    &__subtext {
+      margin-top: rem(12px);
+      color: #5a607f;
+      font-size: rem(12px);
+    }
+  }
+
+  .helper {
+    margin-top: rem(30px);
+    &__inner {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: rem(29px);
+
+      @media #{media('<',m)} {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    &__item {
+      padding: rem(28px);
+      background-color: white;
+      border-radius: rem(6px);
+      box-shadow: 0px 1px 4px 0px rgba(21, 34, 50, 0.08);
+    }
+    &__text {
+      margin-top: rem(12px);
+      color: #131523;
+      font-size: rem(14px);
+      font-weight: 400;
+      line-height: rem(20px); /* 142.857% */
+    }
+
+    &__link {
+      margin-top: rem(20px);
+      cursor: pointer;
+      color: #1e5eff;
+      font-size: rem(14px);
+      font-weight: 500;
+      transition: $transition;
+
+      @media #{media('>',t)} {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
   }
 }

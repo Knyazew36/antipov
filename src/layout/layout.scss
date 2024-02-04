@@ -3,6 +3,9 @@
   padding-top: 0;
   display: flex;
   flex-direction: column;
+  @media #{media('<',t)} {
+    padding: rem(12px);
+  }
 }
 
 .content {
@@ -14,10 +17,20 @@
     flex-direction: column;
     gap: rem(4px);
   }
+  @media #{media('<',t)} {
+    gap: rem(12px);
+  }
+
+  @media #{media('<',m)} {
+    flex-direction: column;
+  }
 }
 
 .search {
   margin-top: rem(22px);
+  @media #{media('<',t)} {
+    margin-top: rem(10px);
+  }
 }
 
 .block {

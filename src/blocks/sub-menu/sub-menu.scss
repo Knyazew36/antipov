@@ -34,13 +34,35 @@
       white-space: nowrap;
     }
 
-    &:hover {
-      background-color: #1e5eff;
+    @media #{media('>',t)} {
+      &:hover {
+        background-color: #1e5eff;
 
-      a {
-        color: #fff;
-        font-weight: 700;
+        a {
+          color: #fff;
+          font-weight: 700;
+        }
       }
+    }
+  }
+}
+
+@media #{media('<',t)} {
+  .sub-menu {
+    width: rem(200px);
+
+    &__inner {
+      gap: 0;
+    }
+
+    &__title {
+      padding: rem(8px);
+    }
+
+    &__list {
+    }
+    &__item {
+      padding: rem(8px);
     }
   }
 }

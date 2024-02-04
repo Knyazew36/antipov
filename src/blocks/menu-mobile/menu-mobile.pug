@@ -1,8 +1,19 @@
-mixin sidebar(mods)
-
-  aside.sidebar(class=allMods)&attributes(attributes)
+mixin menu-mobile(mods)
+  .menu-mobile(class=allMods)&attributes(attributes)
     .overlay
-    .sidebar__inner 
+
+    .menu-mobile__inner
+    
+      .header__controls.menu-mobile__top
+        .menu-mobile__close(data-menu-close='')
+          +close-svg
+        .col
+          button.header__dialog
+            +dialog-svg
+          button.header__notifications 
+            +notifications-svg
+            span 5
+
       navigation.sidebar-navigation
         ul.sidebar-list
           li.sidebar-list__item
